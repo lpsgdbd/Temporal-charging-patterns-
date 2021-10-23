@@ -1,0 +1,12 @@
+tool: Stata
+1) PEV
+. import delimited mlogit_PEV.csv, clear
+. sum
+. mlogit pattern cs_soc power price pt week d_mi t_mi, base(3) nolog
+. mlogit, rrr
+2) CSEV
+. import delimited mlogit_CSEV.csv,clear
+. sum
+. mlogit pattern cs_soc power price pt week d_mi t_mi, base(3) nolog
+. mlogit, rrr
+
